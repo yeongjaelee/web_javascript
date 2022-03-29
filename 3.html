@@ -1,76 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Web - javascript</title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <script>
-    function nightDayHandler(self){
-        var target =  document.querySelector('body');
-        if(self.value ==='night'){
-        target.style.backgroundColor='black';
-        target.style.color='white';
-        self.value ='day';
-        var list = document.querySelectorAll('a');
-        var i=0;
-        while(i<list.length){
-        console.log(list[i])
-        list[i].style.color='powderblue';
-        i+=1;
-        }
-        }
-        else{
-        target.style.backgroundColor='white';
-        target.style.color='black';
-        self.value ='night';
-        var list = document.querySelectorAll('a');
-        var i=0;
-        while(i<list.length){
-        console.log(list[i])
-        list[i].style.color='blue';
-        i+=1;
-        }
-        }
-        }
-    </script>
-    <input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';
-    ">
-    <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';
-    ">
-    <input type="button" value="night" onclick="
-    /*var target =  document.querySelector('body');*/
-    nightDayHandler(this);
-    ">
-    <h1><a href="index.html">Web</a></h1>
-<div id="grid">
-<ol>
-    <li><a href="1.html">html</a></li>
-    <li><a href="2.html">css</a></li>
-    <li><a href="3.html">javascript</a></li>
-</ol>
+    <head>
+        <title>Web - javascript</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function LinkssetColor(color){
+                var list = document.querySelectorAll('a');
+                var i=0;
+                while(i<list.length){
+                console.log(list[i])
+                list[i].style.color=color;
+                i+=1;
+                }
+            }
+            function BodySetColor(color){
+                document.querySelector('body').style.color=color;
+            }
+            function BodySetBackgroundColor(color){
+                document.querySelector('body').style.backgroundColor=color;
+            }
+            function nightDayHandler(self){
+                var target =  document.querySelector('body');
+                if(self.value ==='night'){
+                BodySetBackgroundColor('black')
+                BodySetColor('white');
+                self.value ='day';
+                LinkssetColor('powderblue');
+                }
+                else{
+                BodySetBackgroundColor('white')
+                BodySetColor('black');
+                self.value ='night';
+                LinkssetColor('blue');
+                }
+                }
+            
+            </script>
+    </head>
+    <body>
+        <input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        ">
+        <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        ">
+        <input type="button" value="night" onclick="
+        /*var target =  document.querySelector('body');*/
+        nightDayHandler(this);
+        ">
+        <h1><a href="index.html">Web</a></h1>
+            <div id="grid">     
+                <ol>
+                    <li><a href="1.html">html</a></li>
+                    <li><a href="2.html">css</a></li>
+                    <li><a href="3.html">javascript</a></li>
+                </ol>
+            <div id="article">
+                <h2><a href="https://www.javascript.com/" target="_blank" title="html5 specification">javascript</a></h2> 
+                <p><strong><u>Javascript</u></strong>, </p>
 
-<div id="article">
-<h2><a href="https://www.javascript.com/" target="_blank" title="html5 specification">javascript</a></h2> 
-<p><strong><u>Javascript</u></strong>, </p>
-
-<p style="margin-top:45px;">is the world's most popular programming language.
-
-    JavaScript is the programming language of the Web.
-    
-    JavaScript is easy to learn.
-    
-    This tutorial will teach you JavaScript from basic to advanced</p>
-
-
-<p><img src="coding.jpg" width="350"></p>
-</div>
-</div>
-<input type="button" value="night" onclick="
-    nightDayHandler(this);
-    ">
-</body>
+                <p style="margin-top:45px;">is the world's most popular programming language.
+                    JavaScript is the programming language of the Web.
+                    JavaScript is easy to learn.
+                    This tutorial will teach you JavaScript from basic to advanced</p>
+                <p><img src="coding.jpg" width="350"></p>
+            </div>
+            </div>
+            <input type="button" value="night" onclick="
+                nightDayHandler(this);
+                ">
+    </body>
 </html>
