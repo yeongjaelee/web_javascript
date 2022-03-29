@@ -1,21 +1,23 @@
 var Body = {
     setColor:function(color){
-        document.querySelector('body').style.color=color;
+        // document.querySelector('body').style.color=color;
+        $('body').css('color',color);
     },
     SetBackgroundColor:function(color){
-        document.querySelector('body').style.backgroundColor=color;
+        // document.querySelector('body').style.backgroundColor=color;
+        $('body').css('backgroundColor',color);
     }
 }
 function LinkssetColor(color){
-    var list = document.querySelectorAll('a');
-    var i=0;
-    while(i<list.length){
-    console.log(list[i])
-    list[i].style.color=color;
-    i+=1;
-    }
+    // var list = document.querySelectorAll('a');
+    // var i=0;
+    // while(i<list.length){
+    // console.log(list[i])
+    // list[i].style.color=color;
+    // i+=1;
+    // }
+    $('a').css('color',color);
 }
-
 function nightDayHandler(self){
     var target =  document.querySelector('body');
     if(self.value ==='night'){
