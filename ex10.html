@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var cowokrers = {
+            "programmer":"lee",
+            "designer":"yeongjae"
+        };
+        document.write("programmer:",cowokrers.programmer,"<br>");
+        document.write("designer:",cowokrers.designer,"<br>");
+        cowokrers.bookkeeper = "duru";
+        document.write("bookkeeper:",cowokrers.bookkeeper,"<br>");
+        cowokrers["data scientist"] = "taeho";
+        document.write("data scientist:",cowokrers["data scientist"],"<br>");
+    </script>
+    <h2>Iterate</h2>
+    <script>
+        for(var key in cowokrers){
+            document.write(key,":"); /*first cycle*/
+            document.write(cowokrers[key],"<br>");/*second cycle*/
+        }
+    </script>
+    <h2>Property & Method</h2>
+    <script>
+        cowokrers.showAll = function(){
+            for(var key in this){
+            document.write(key,":"); /*first cycle*/
+            document.write(this[key],"<br>");/*second cycle*/
+        }
+        }
+        cowokrers.showAll();
+        function showing(){
+            for(var key in cowokrers){
+            document.write(key,":"); /*first cycle*/
+            document.write(cowokrers[key],"<br>");/*second cycle*/
+        }
+        }
+        showing();
+    </script>
+</body>
+</html>
